@@ -9,4 +9,8 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  {
+    "jamestthompson3/nvim-remote-containers",
+    event = "VeryLazy",
+  },
 }
