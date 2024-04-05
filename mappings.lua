@@ -5,6 +5,8 @@
 -- automatically pick-up stored data by this setting.)
 return {
   -- first key is the mode
+  -- imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+   --   let g:copilot_no_tab_map = v:true
   n = {
     -- second key is the lefthand side of the map
 
@@ -22,6 +24,14 @@ return {
     ["<leader>bD"] = {
       function()
         require("astronvim.utils.status").heirline.buffer_picker(
+          function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
+        )
+      end,
+      desc = "Pick to close",
+    },
+    ["<C-/>"] = {
+      function()
+        require("").heirline.buffer_picker(
           function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
         )
       end,

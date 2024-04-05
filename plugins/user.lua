@@ -10,6 +10,14 @@ return {
   --   end,
   -- },
   {
+    "github/copilot.vim",
+    event = "VeryLazy",
+  },
+  {
+    "declancm/cinnamon.nvim",
+    event = "VeryLazy",
+  },
+  {
     "jamestthompson3/nvim-remote-containers",
     event = "VeryLazy",
   },
